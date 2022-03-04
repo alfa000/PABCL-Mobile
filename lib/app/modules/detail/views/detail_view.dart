@@ -21,14 +21,29 @@ class DetailView extends GetView<DetailController> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Image.network("https://image.tmdb.org/t/p/w500" +
+                  data.posterPath.toString()),
               Text(
                 data.originalTitle.toString(),
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              Text("Rating :"),
-              Text("Release :"),
-              Text("Overview"),
-              Text("aaa"),
+              Text(
+                data.title.toString(),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              Text(
+                "Rating :" + data.voteAverage.toString(),
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+              Text(
+                "Release Date :" + data.releaseDate.toString(),
+                style: TextStyle(fontSize: 14, color: Colors.white),
+              ),
+              Text("Overview :"),
+              Text(
+                data.overview.toString(),
+                style: TextStyle(fontSize: 12, color: Colors.white),
+              ),
             ],
           ),
         ],
