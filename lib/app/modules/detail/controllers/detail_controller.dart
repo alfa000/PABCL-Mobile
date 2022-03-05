@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:my_movie/app/service/movie_service.dart';
 
-class DetailController extends GetxController with StateMixin {
+class DetailController extends GetxController with StateMixin<dynamic> {
   //TODO: Implement DetailController
 
   final count = 0.obs;
